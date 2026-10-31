@@ -1,0 +1,165 @@
+{
+  "components": {
+    "com.iwsdk.components.DomeGradient": {
+      "azimuthDeg": -31,
+      "dither": true,
+      "elevationDeg": 24,
+      "equator": [
+        0.808,
+        0.855,
+        0.91,
+        1
+      ],
+      "ground": [
+        0.902,
+        0.855,
+        0.82,
+        1
+      ],
+      "sky": [
+        0.843,
+        0.796,
+        0.882,
+        1
+      ]
+    },
+    "com.iwsdk.components.IBLGradient": {
+      "equator": [
+        0.78,
+        0.78,
+        0.84,
+        1
+      ],
+      "ground": [
+        0.5,
+        0.52,
+        0.58,
+        1
+      ],
+      "intensity": 0.2025,
+      "sky": [
+        0.72,
+        0.7,
+        0.8,
+        1
+      ]
+    }
+  },
+  "environment": {
+    "exposure": 1.2,
+    "shadowMapType": "pcf",
+    "shadows": true,
+    "toneMapping": "aces"
+  },
+  "nodes": [
+    {
+      "components": {
+        "DomeFade": {
+          "end": 10,
+          "start": 4
+        },
+        "LocomotionEnvironment": {}
+      },
+      "content": {
+        "asset": "studio-floor",
+        "receiveShadow": true,
+        "type": "asset"
+      },
+      "framingRole": "support",
+      "id": "floor",
+      "name": "Floor"
+    },
+    {
+      "components": {
+        "com.iwsdk.components.TwoHandsGrabbable": {
+          "rotate": false,
+          "scale": false,
+          "scaleMax": [
+            3,
+            3,
+            3
+          ],
+          "scaleMin": [
+            0.5,
+            0.5,
+            0.5
+          ],
+          "translate": false
+        }
+      },
+      "content": {
+        "asset": "graphite-cube",
+        "type": "asset"
+      },
+      "id": "cube",
+      "name": "Cube",
+      "transform": {
+        "position": [
+          0,
+          1.1,
+          -0.6
+        ],
+        "rotationDeg": [
+          0,
+          0,
+          0
+        ],
+        "scale": 2.5
+      }
+    },
+    {
+      "components": {
+        "DirectionalLight": {
+          "castShadow": true,
+          "color": [
+            1,
+            0.95,
+            0.9,
+            1
+          ],
+          "intensity": 2,
+          "shadowCameraSize": 8,
+          "shadowMapSize": "2048"
+        }
+      },
+      "id": "key-light",
+      "name": "Key Light",
+      "transform": {
+        "position": [
+          -2,
+          10,
+          2
+        ],
+        "rotationDeg": [
+          -70,
+          -10,
+          0
+        ]
+      }
+    },
+    {
+      "components": {
+        "HemisphereLight": {
+          "groundColor": [
+            0.6,
+            0.6,
+            0.65,
+            1
+          ],
+          "intensity": 1,
+          "skyColor": [
+            0.8,
+            0.85,
+            1,
+            1
+          ]
+        }
+      },
+      "id": "fill-light",
+      "name": "Fill Light"
+    }
+  ],
+  "resources": {},
+  "units": "meters",
+  "version": "iwsdk.scene.v1"
+}
