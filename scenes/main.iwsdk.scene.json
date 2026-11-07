@@ -70,14 +70,32 @@
       "name": "Floor"
     },
     {
+      "children": [
+        {
+          "content": {
+            "asset": "model",
+            "type": "asset"
+          },
+          "id": "model-mesh",
+          "name": "Model Mesh",
+          "transform": {
+            "position": [
+              0,
+              0,
+              0
+            ],
+            "scale": 0.4
+          }
+        }
+      ],
       "components": {
         "com.iwsdk.components.TwoHandsGrabbable": {
           "rotate": false,
           "scale": false,
           "scaleMax": [
-            3,
-            3,
-            3
+            2.5,
+            2.5,
+            2.5
           ],
           "scaleMin": [
             0.5,
@@ -87,12 +105,8 @@
           "translate": false
         }
       },
-      "content": {
-        "asset": "graphite-cube",
-        "type": "asset"
-      },
-      "id": "cube",
-      "name": "Cube",
+      "id": "model-root",
+      "name": "Model",
       "transform": {
         "position": [
           0,
